@@ -2,14 +2,19 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  /* It's hard to draw shadows on a black background or highlights on a white background. */
   background-color: #ddd;
 }
 
 svg {
+  /* This will ensure that the SVG units and the CSS pixels are the same size.  So it's easy to coordinate between the SVG and the rest of the web page. */
   width: 1px;
   height: 1px;
+  /* I'm drawing this at 1px ⨉ 1px, but I want it to display as big as the document. */
   overflow: visible;
+  /* I want this to sit on top of the document and scroll with the document. */
   position: absolute;
+  /* The effect is drawn on top but it should not interfere with the mouse. */
   pointer-events: none;
 }
 
@@ -19,15 +24,19 @@ svg {
 }
 
 .group-top {
+  /* Turn off the blur to see what's really going on. */
   filter: blur(5px);
+  /* We are only drawing the outline of each Wave.  Inside there are more wave Objects. */
   stroke-width: 15px;
-   fill:none;
+  fill: none;
 }
 
 .group-top > :nth-child(1) {
-  stroke : rgba(0 0 0 / 0.2);
+  /* The shadow. */
+  stroke: rgba(0 0 0 / 0.2);
 }
 
 .group-top > :nth-child(2) {
-  stroke : rgba(255 255 255 / 50%);
+  /* The highlight. */
+  stroke: rgba(255 255 255 / 50%);
 }
