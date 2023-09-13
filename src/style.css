@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #ddd;
+}
+
+svg {
+  width: 1px;
+  height: 1px;
+  overflow: visible;
+  position: absolute;
+  pointer-events: none;
+}
+
+#lyrics {
+  white-space: pre-line;
+  font-size: 190%;
+}
+
+.group-top {
+  filter: blur(5px);
+  stroke-width: 15px;
+   fill:none;
+}
+
+.group-top > :nth-child(1) {
+  stroke : rgba(0 0 0 / 0.2);
+}
+
+.group-top > :nth-child(2) {
+  stroke : rgba(255 255 255 / 50%);
+}
