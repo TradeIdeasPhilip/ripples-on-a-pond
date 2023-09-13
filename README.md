@@ -1,4 +1,4 @@
-# Fun Background
+# Ripples on a Pond
 
 I'm using SVG to make a fun background for a web page.
 This looks like ripples on a pond, and the ripples follow the mouse.
